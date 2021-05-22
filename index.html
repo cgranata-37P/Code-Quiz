@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,86 +8,52 @@
     <link rel="stylesheet" href="style.css" />
     <title>Code Quiz</title>
 </head>
-<body>
 
-    <h1>Coding Quiz Challenge</h1>
-        <p><span>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.</span>
+<body>
+    
+    <header>
+        <a href="highscores.html">View Highscores</a>
+        <h2 class="time" style="text-align:right;"></h2>
+    </header>
+
+    <section id="start-container">
+        <h1>Coding Quiz Challenge</h1>
+        <p><span>Try to answer the following code related questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time by ten seconds.</span>
         </p>
 
         <button id="start">Start Quiz</button>
-
-    <section class="question-container">
-
-        <div id="question-1">
-            <h3>1. Commonly used data types DO Not include:</h3>
-                <ol>
-                    <li>Strings</li>
-                    <li>Booleans</li>
-                    <li>Alerts</li>
-                    <li>Numbers</li>
-                </ol>
-        </div>
-
-        <div id="question-2">
-            <h3>2. The condition in an if/else statement is enclosed within  ____ :</h3>
-                <ol>
-                    <li>Quotes</li>
-                    <li>Curly Brackets</li>
-                    <li>Parentheses</li>
-                    <li>Square Brackets</li>
-                </ol>
-        </div>
-
-        <div id="question-3">
-            <h3>3. Arrays in JavaScript can be used to store  _____ :</h3>
-                <ol>
-                    <li>Numbers and Strings</li>
-                    <li>Other Arrays</li>
-                    <li>Booleans</li>
-                    <li>All of the above</li>
-                </ol>
-        </div>
-
-        <div id="question-4">
-            <h3>4. String values must be enclosed within ____ when being assigned to variables:</h3>
-                <ol>
-                    <li>Commas</li>
-                    <li>Curly Brackets</li>
-                    <li>Quotes</li>
-                    <li>Parentheses</li>
-                </ol>
-        </div>
-
-        <div id="question-5">
-            <h3>5. A very useful tool used during development and debugging for printing content to the debugger is:</h3>
-                <ol>
-                    <li>JavaScript</li>
-                    <li>Terminal/Bash</li>
-                    <li>For Loops</li>
-                    <li>Console.log</li>
-                </ol>
-        </div>
     </section>
 
-    <section class="finished-container">
+    <section id="question-container" class="hide">
+
+        <div id="question-box">
+            <h3 id="question-h3"></h3>
+            <div id="choices"></div>
+        </div>
+
+    </section>
+
+    <section id="finished-container" class="hide">
         <div id="done">
             <h3>All done!</h3>
-            <h3>Your final score is  ____</h3>
-            <h3>Enter Initials</h3> 
+            <h3>Your final score is <span id="final-score"></span></h3>
+            <h3>Enter Initials</h3>
             <textarea></textarea>
         </div>
-    </section>
-    <button id="submit">Submit</button>
+        <button id="submit">Submit</button>
 
-    <section class="high-scores">
-        <div id="back">
-            <h3>Highscores</h3>
-            <textarea></textarea>
-        </div>
+        <section class="high-scores">
+            <div id="back">
+                <h3>Highscores</h3>
+                <textarea></textarea>
+            </div>
+        </section>
+        <button id="go-back">Go Back</button><button id="clear">Highscores</button>
     </section>
-    <button id="go-back">Go Back</button><button id="clear">Highscores</button>
-        
+
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
